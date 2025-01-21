@@ -2,10 +2,9 @@
 {
     public class Proyectos
     {
-        public Proyectos miProyecto { get; set; }
-        public string Titulo;
-        public string Descripcion;
-        public string Link;
-        public string ImagenURL;
+        public string Titulo { get; set; }
+        public string Descripcion{ get; set; }
+        public string Link{ get; set; }
+        public string ImagenURL{ get; set; }
     }
 }

@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="getDatos">
+    <input type="radio" name="sexo" value="M">Mujer
+    <input type="radio" name="sexo" value="H">Hombre
+    <input type="radio" name="sexo" value="X">Otro
+    <hr />
+    <br />
+    <input type="checkbox" name="aficiones" value="lectura">leer
+    <input type="checkbox" name="aficiones" value="viajes">viajar
+    <input type="checkbox" name="aficiones" value="deporte">deporte
+    <hr />
+    <select name="ciclo">
+    <option value="DAW">Desarrollo web</option>
+        <option value="ASIR">ASIR</option>
+     
+
+</select>
+    <input type="submit" name="name" value="Enviar" />
+</form>

@@ -3,9 +3,9 @@
     public class Persona
    
     {
-        public Persona MiPersona { get; set; }
-        int nombre;
-        int edad;
-        string foto;
+        public int edad { get; set; }
+        public string nombre { get; set; }
+        public string perfil { get; set; }
+        
     }
 }

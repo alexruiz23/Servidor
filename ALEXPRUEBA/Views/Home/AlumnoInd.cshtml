@@ -1,0 +1,17 @@
+﻿@model Alumno
+
+@if (Model != null)
+{
+    <h2>Datos del Alumno</h2>
+    <ul>
+        <li><strong>Nick:</strong> @Model.nick</li>
+        <li><strong>Nombre:</strong> @Model.nombre</li>
+        <li><strong>Email:</strong> @Model.email</li>
+        <li><strong>Ciclo:</strong> @Model.ciclo</li>
+        <li><strong>Curso:</strong> @Model.curso</li>
+    </ul>
+}
+else
+{
+    <h2>No se encontraron datos del alumno</h2>
+}
