@@ -1,21 +1,25 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Practica5.Interfaces;
 using Practica5.Models;
 
 namespace Practica5.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ICiclo cicloservice;
+
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ICiclo ciclo)
         {
-            _logger = logger;
+            this.cicloservice = ciclo;
         }
 
         public IActionResult Index()
         {
-            return View();
+            List<Ciclo> l = this.cicloservice.GetCiclos();
+            return View(l);
         }
 
         public IActionResult Privacy()
@@ -23,10 +27,6 @@ namespace Practica5.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+   
     }
 }

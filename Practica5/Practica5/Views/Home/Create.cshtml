@@ -1,4 +1,4 @@
-﻿@model EjemploBBDDEF.Models.Ciclo
+﻿@model Practica5.Models.Ciclo
 
 @{
     ViewData["Title"] = "Create";
@@ -12,11 +12,7 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Especialidad" class="control-label"></label>
-                <input asp-for="Especialidad" class="form-control" />
-                <span asp-validation-for="Especialidad" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <label asp-for="Siglas" class="control-label"></label>
                 <input asp-for="Siglas" class="form-control" />

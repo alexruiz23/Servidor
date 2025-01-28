@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var ciclo = Model.ciclo;
+    var ciclo = Model.CicloAlumno;
 }
 
 <h1 class="display-4">LISTADO DE ALUMNOS</h1>
@@ -32,9 +32,6 @@
     <tbody>
 @foreach (var item in Model.lista) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdAlumno)
-            </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.DNI)
                 </td>

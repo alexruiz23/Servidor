@@ -27,7 +27,7 @@ namespace Practica5.Repositorios
 
         public List<Ciclo> GetCiclosByEspecialidad()
         {
-            return this.context.ciclos.OrderBy(c => c.Especialidad).ToList();
+            return this.context.ciclos.OrderBy(c => c.Siglas).ToList();
 
 
         }
@@ -38,15 +38,7 @@ namespace Practica5.Repositorios
 
         }
 
-        public Ciclo FindCiclo(int id)
-        {
-            //var sql = from datos in this.context.ciclos
-            //          where datos.IdCiclo == id
-            //          select datos;
-            //return sql.FirstOrDefault<Ciclo>();
-            return this.context.ciclos.FirstOrDefault<Ciclo>(c => c.IdCiclo == id);
-
-        }
+        
 
         public async Task AddCiclo(Ciclo c)
         {
@@ -56,11 +48,6 @@ namespace Practica5.Repositorios
         }
 
 
-        public async Task DeleteCiclo(int id)
-        {
-            var c = this.context.ciclos.FirstOrDefault<Ciclo>(c => c.IdCiclo == id);
-            this.context.ciclos.Remove(c);
-            await this.context.SaveChangesAsync();
-        }
+     
     }
     }

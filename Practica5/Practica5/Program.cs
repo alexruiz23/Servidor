@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using Practica5.Data;
 using Practica5.Interfaces;
 using Practica5.Repositorios;
-using Practica5.Repositorios;
 using static Practica5.Repositorios.RepositorioAlumnos;
 
 var builder = WebApplication.CreateBuilder(args);

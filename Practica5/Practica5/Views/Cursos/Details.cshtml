@@ -1,4 +1,4 @@
-﻿@model EjemploBBDDEF.Models.CicloDetailView
+﻿@model Practica5.Models.CicloDetailView
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -26,7 +26,7 @@
                     <th class="col-2">CURSO</th>
                     @foreach (var c in Model.Cursos)
                     {
-                        <td class="col-5">@c.CursoCiclo</td>
+                        <td class="col-5">@c.CicloCurso</td>
                     }
                 </tr>
                 <tr class="d-flex">
@@ -35,7 +35,7 @@
                     @foreach (var c in Model.Cursos)
                     {
                         <td class="col-5">
-                            @c.Aula
+                            @c.NumeroCurso
                         </td>
                     }
                 </tr>
