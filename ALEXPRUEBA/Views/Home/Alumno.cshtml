@@ -1,0 +1,20 @@
+﻿@model List<Alumno>
+
+@if (Model != null)
+{
+        @foreach (var a in Model)
+            {
+    <h2>VIVA PERRO SANXE</h2>
+    <ul>
+        <li><strong>Nick:</strong> @a.nick</li>
+        <li><strong>Nombre:</strong> @a.nombre</li>
+        <li><strong>Email:</strong> @a.email</li>
+        <li><strong>Ciclo:</strong> @a.ciclo</li>
+        <li><strong>Curso:</strong> @a.curso</li>
+    </ul>
+                }
+            }
+else
+{
+    <h2>No se encontraron datos del alumno</h2>
+}

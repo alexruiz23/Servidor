@@ -1,0 +1,17 @@
+﻿@model Alumno
+ 
+<form method="post" asp-action="Editar">
+    <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre</label>
+        <input type="text" id="" name="Nombre" class="form-control" value="@Model.Nombre" readonly/>
+    </div>
+    <div class="mb-3">
+        <label for="Apellidos" class="form-label">Apellidos</label>
+        <input type="text" id="Apellido" name="Apellidos" class="form-control" value="@Model.Apellidos" readonly/>
+    </div>
+    <div class="mb-3">
+        <label for="Telefono" class="form-label">Telefono </label>
+        <input type="tel" id="Telefono " name="Telefono" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-success">Modificar</button>
+</form>
