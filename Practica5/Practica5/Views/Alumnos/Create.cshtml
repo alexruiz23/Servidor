@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 <h2>Añadir Alumno</h2>
@@ -12,7 +13,7 @@
 <br />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="index" asp-controller="Home">
+        <form asp-action="Create" asp-controller="Alumnos">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Nombre" class="control-label"></label>

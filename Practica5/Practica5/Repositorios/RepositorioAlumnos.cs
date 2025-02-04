@@ -18,22 +18,22 @@ namespace Practica5.Repositorios
 
             public List<Alumno> getAlumnosCiclo(string siglas)
             {
-                return this._context.alumnos.Where<Alumno>(a => a.CicloAlumno == siglas).ToList();
+                return this._context.Alumnos.Where<Alumno>(a => a.CicloAlumno== siglas).ToList();
             }
 
             public List<Alumno> getAlumnosCicloByCurso(string siglas)
             {
-                return this._context.alumnos.Where<Alumno>(a => a.CicloAlumno == siglas).OrderBy(a => a.CursoAlumno).ToList();
+                return this._context.Alumnos.Where<Alumno>(a => a.CicloAlumno == siglas).OrderBy(a => a.CursoAlumno).ToList();
             }
             public async Task<int> addAlumnos(Alumno a)
             {
-                this._context.alumnos.Add(a);
+                this._context.Alumnos.Add(a);
                 return await this._context.SaveChangesAsync();
             }
 
             public Alumno findAlumno(string dni)
             {
-                return this._context.alumnos.FirstOrDefault<Alumno>(a => a.DNI == dni);
+                return this._context.Alumnos.FirstOrDefault<Alumno>(a => a.DNI == dni);
             }
         }
     }

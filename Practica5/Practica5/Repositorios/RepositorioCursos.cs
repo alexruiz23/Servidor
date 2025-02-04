@@ -16,7 +16,7 @@ namespace Practica5.Repositorios
 
         public List<Curso> getCursosCiclo(string siglas)
         {
-            return this._context.cursos.Where<Curso>(c => c.CicloCurso == siglas).ToList();
+            return this._context.Cursos.Where<Curso>(c => c.CicloCurso == siglas).ToList();
         }
     }
 }

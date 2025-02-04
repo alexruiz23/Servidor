@@ -40,6 +40,7 @@ namespace Practica5.Models
 
         [Required]
         [Column("id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int  idAlumno { get; set; }
     }
 

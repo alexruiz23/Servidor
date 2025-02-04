@@ -18,7 +18,7 @@ namespace Practica5.Repositorios
             // var sql = from datos in this.context.ciclos
             //select datos;
             //var c=this.context.ciclos.Where<Ciclo>(c => c.Siglas == "DAW");
-            var x = this.context.ciclos.ToList();
+            var x = this.context.Ciclos.ToList();
             return x;
 
 
@@ -27,14 +27,14 @@ namespace Practica5.Repositorios
 
         public List<Ciclo> GetCiclosByEspecialidad()
         {
-            return this.context.ciclos.OrderBy(c => c.Siglas).ToList();
+            return this.context.Ciclos.OrderBy(c => c.Siglas).ToList();
 
 
         }
 
         public Ciclo FindCiclo(string siglas)
         {
-            return this.context.ciclos.FirstOrDefault<Ciclo>(c => c.Siglas == siglas);
+            return this.context.Ciclos.FirstOrDefault<Ciclo>(c => c.Siglas == siglas);
 
         }
 
@@ -42,15 +42,15 @@ namespace Practica5.Repositorios
 
         public async Task AddCiclo(Ciclo c)
         {
-            this.context.ciclos.Add(c);
+            this.context.Ciclos.Add(c);
             await this.context.SaveChangesAsync();
 
         }
 
         public async Task DeleteCiclo(string siglas)
         {
-            var c = this.context.ciclos.FirstOrDefault<Ciclo>(c => c.Siglas == siglas);
-            this.context.ciclos.Remove(c);
+            var c = this.context.Ciclos.FirstOrDefault<Ciclo>(c => c.Siglas == siglas);
+            this.context.Ciclos.Remove(c);
             await this.context.SaveChangesAsync();
         }
 

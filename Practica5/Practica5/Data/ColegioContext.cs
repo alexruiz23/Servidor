@@ -7,10 +7,10 @@ namespace Practica5.Data
     {
 
         public ColegioContext(DbContextOptions<ColegioContext> options) : base(options) { }
-        public DbSet<Ciclo> ciclos { get; set; }
+        public DbSet<Ciclo> Ciclos { get; set; }
 
-        public DbSet<Alumno> alumnos { get; set; }
+        public DbSet<Alumno> Alumnos { get; set; }
 
-        public DbSet<Curso> cursos { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace Practica5.Controllers
             AlumnosCicloView a = new AlumnosCicloView
             {
                 lista = l,
-                CicloAlumno = cl.Nombre
+                CicloAlumno = cl.Siglas
             };
             return View(a);
         }
@@ -29,6 +29,16 @@ namespace Practica5.Controllers
             Alumno a = new Alumno();
             a.CicloAlumno = siglas;
             return View(a);
+        }
+        [HttpPost]
+        public ActionResult Create(Alumno a)
+        {
+            a.Telefono = "677876545";
+            a.Edad = 34;
+            a.Apellidos = "Perez";
+            this.data.addAlumnos(a);
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }
