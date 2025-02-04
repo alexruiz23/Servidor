@@ -27,6 +27,11 @@ namespace Practica5.Controllers
             return View();
         }
 
-   
+        public IActionResult Details(string siglas)
+        {
+            Ciclo c = this.cicloservice.FindCiclo(siglas);
+            return View(c);
+        }
+
     }
 }

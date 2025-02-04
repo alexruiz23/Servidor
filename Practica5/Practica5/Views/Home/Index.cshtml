@@ -1,4 +1,4 @@
-﻿using Practica5.Models;
+﻿
 @model List<Ciclo>
 
 @{
@@ -11,20 +11,52 @@
     <h3><a asp-action="Create" class="link-secondary">Nuevo Ciclo</a></h3>
     <br />
     <table class="table table-bordered">
-       
+
         <tbody>
             @foreach (Ciclo c in Model)
-            
+
             {
                 <tr>             
-                     <td>@c.Numero_Cursos</td>
+                    <td>@c.Numero_Cursos</td>
                     <td>@c.Nombre</td>
                     <td>@c.Codigo</td>
 
                 </tr>
+         
+            }
 
-
-
+    <h1 class="display-4">Ejemplo Entity Framework</h1>
+    <br /><br />
+    <h3><a asp-action="Create" class="link-secondary">Nuevo Ciclo</a></h3>
+    <br />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ESPECIALIDAD</th>
+                <th>SIGLAS</th>
+                <th>NOMBRE</th>
+                <th>CURSOS</th>
+                <th></th>
+            </tr>
+        </thead>
+       
+            @foreach (Ciclo c in Model)
+            {
+                <tr>
+     
+                    <td>@c.Siglas</td>
+                    <td>@c.Nombre</td>
+                    <td>@c.Codigo</td>
+                    <td>
+                        <a class="btn btn-success" asp-action="Details" asp-route-siglas="@c.Siglas"><i class="bi-eye-fill"></i></a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@c.Siglas"><i class="bi-trash-fill"></i></a>
+                        <a class="btn btn-warning" asp-controller="Alumnos" asp-action="Create" asp-route-siglas="@c.Siglas"><i class="bi-person-plus-fill"></i></a>
+                        <a class="btn btn-info" asp-controller="Alumnos" asp-action="Index" asp-route-siglas="@c.Siglas"><i class="bi-people-fill"></i></a>
+                    </td>
+                </tr>
             }
         </tbody>
-    </table>
+   </table>
+
+
