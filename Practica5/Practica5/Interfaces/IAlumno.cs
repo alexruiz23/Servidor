@@ -8,5 +8,7 @@ namespace Practica5.Interfaces
         public List<Alumno> getAlumnosCicloByCurso(string siglas);
         public Task<int> addAlumnos(Alumno a);
         public Alumno findAlumno(string dni);
+
+        
     }
 }

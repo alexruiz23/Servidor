@@ -47,7 +47,14 @@ namespace Practica5.Repositorios
 
         }
 
+        public async Task DeleteCiclo(string siglas)
+        {
+            var c = this.context.ciclos.FirstOrDefault<Ciclo>(c => c.Siglas == siglas);
+            this.context.ciclos.Remove(c);
+            await this.context.SaveChangesAsync();
+        }
 
-     
+
+
     }
     }

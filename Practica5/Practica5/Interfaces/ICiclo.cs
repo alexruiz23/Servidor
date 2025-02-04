@@ -8,5 +8,7 @@ namespace Practica5.Interfaces
         public List<Ciclo> GetCiclosByEspecialidad();
         public Ciclo FindCiclo(string siglas);
         public Task AddCiclo(Ciclo c);
+
+        public Task DeleteCiclo(string siglas);
     }
 }

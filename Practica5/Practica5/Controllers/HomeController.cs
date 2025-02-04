@@ -33,5 +33,11 @@ namespace Practica5.Controllers
             return View(c);
         }
 
+        public IActionResult Delete(string siglas)
+        {
+            this.cicloservice.DeleteCiclo(siglas);
+            return RedirectToAction("Index");
+        }
+
     }
 }

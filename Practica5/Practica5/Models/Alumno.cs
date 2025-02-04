@@ -21,7 +21,7 @@ namespace Practica5.Models
 
 
         [Required]
-        [Column("Telofono")]
+        [Column("Telefono")]
         public string Telefono { get; set; }
 
 
