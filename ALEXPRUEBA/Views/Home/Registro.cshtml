@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Registro de Alumnos";
+}
+<h2>Registro de Alumnos</h2>
+<form method="post" action="GetRegistro">
+    <div class="mb-3">
+        <label for="nick" class="form-label">Nick</label>
+        <input type="text" id="nick" name="nick" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label for="contra" class="form-label">Contraseña</label>
+        <input type="password" id="contra" name="contra" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="email" class="form-control" required />
+    </div>
+    <div class="mb-3">
+        <label for="ciclo" class="form-label">Ciclo</label>
+        <select id="ciclo" name="ciclo" class="form-select">
+            <option value="DAW">DAW</option>
+            <option value="ASIR">ASIR</option>
+            <option value="FINANZAS">FINANZAS</option>
+            <option value="MARKETING">MARKETING</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="curso" class="form-label">Curso</label>
+        <input type="number" id="curso" name="curso" class="form-control" min="1" max="2" required />
+    </div>
+    <div class="mb-3">
+        <label for="idiomas" class="form-label">Idiomas (separados por comas)</label>
+        <input type="text" id="idiomas" name="idiomas" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Registrar</button>
+</form>

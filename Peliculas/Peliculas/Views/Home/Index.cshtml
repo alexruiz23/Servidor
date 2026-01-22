@@ -1,0 +1,57 @@
+﻿@model TodoView
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+
+    <table class="table table-bordered">
+
+        <tbody>
+
+            @foreach (Pelicula c in Model.Peliculas)
+
+            {
+                <tr>
+                    <td>@c.tituloPelicula</td>
+                    <td>@c.precioPelicula</td>
+
+                    <td>@c.fechaPelicula</td>
+
+                   
+
+                </tr>
+
+            }
+            @foreach ( infoPeliculas c in Model.infoPeliculas)
+
+            {
+                <tr>
+                    
+                    <td>@c.directorPelicula</td>
+         
+                    <td>@c.actorPelicula</td>
+           
+                    <td>@c.actriz</td>
+
+                </tr>
+
+            }
+                @foreach (Genero g in Model.Generos)
+
+                {
+                    <tr>
+
+                        <td>@g.genero</td>
+
+
+                    </tr>
+
+            }
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

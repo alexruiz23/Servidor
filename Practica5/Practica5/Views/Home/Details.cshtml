@@ -1,0 +1,50 @@
+﻿@model Practica5.Models.Ciclo
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="display-4">Details</h2>
+<br /><br />
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+            <table class="table table-bordered ">
+                <tr class="d-flex">
+                    <th class="col-3">CICLO</th>
+                    <td class="col-9">@Model.Nombre</td>
+                </tr>
+                <tr class="d-flex">
+                    <th class="col-3">CURSOS</th>
+                    <td class="col-9">@Model.Numero_Cursos</td>
+
+
+                </tr>
+                <tr class="d-flex">
+                    <th class="col-3">CODIGOS</th>
+                    <td class="col-9">@Model.Codigo</td>
+
+
+                </tr>
+                <tr class="d-flex">
+                    <th class="col-3">SIGLAS</th>
+                    <td class="col-9">@Model.Siglas</td>
+
+
+                </tr>
+
+            </table>
+            <br />
+           
+
+        </div>
+      
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
